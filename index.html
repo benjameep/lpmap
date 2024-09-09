@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JQuery -->
+  <script
+  src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+  integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+  crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <div class="menu">
+      <button onclick="use('alimentations')" class="alimentations">alimentations</button>
+      <button onclick="use('delivery')" class="delivery">delivery</button>
+      <button onclick="use('vent')" class="vent">vents</button>
+      <button onclick="use('computer')" class="computer">computers</button>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 725 728" fill="none">
+      <defs>
+        <radialGradient id="g">
+          <stop stop-color="#fff" offset="0.6"/>
+          <stop stop-color="rgba(255,255,255,0)" offset="1"/>
+        </radialGradient>
+        <filter id="sofGlow" width="300%" height="300%" x="-100%" y="-100%">
+          <!-- Use a gaussian blur to create the soft blurriness of the glow -->
+          <feGaussianBlur in="thicken" stdDeviation="0.5" result="blurred" />
+        </filter>
+      </defs>
+      <path d="M256 318.5V375.5H209.5V318.5H256Z" fill="#8A8794"/>
+      <path d="M256 168V288.5H59V89.5H205V168H256Z" fill="#6D954B"/>
+      <path d="M209 316H143.5V369H209V316Z" fill="#6D954B"/>
+      <path d="M256.5 377.5V559.5H132.5V403H118.5V377.5H256.5Z" fill="#59A88F"/>
+      <path d="M450 669.5V486.5H284V669.5H450Z" fill="#BE6040"/>
+      <path d="M384 69V224H286V69H384Z" fill="#BE8F3B"/>
+      <path d="M385 281.5V336H286.5V281.5H385Z" fill="#BE8F3B"/>
+      <path d="M434 450.5H284V338H446.5V397H434V450.5Z" fill="#8A8794"/>
+      <path d="M569 224.5V164.5L666 164.5V224.5H569Z" fill="#BB4B41"/>
+      <path d="M504 645V480H661.5V563.5H627.5V645H504Z" fill="#6472D3"/>
+      <path d="M295.5 83.5V76.5H320.5V83.5H295.5Z" class="desk"/>
+      <path d="M347 141H340V129.5H347V141Z" class="desk"/>
+      <path d="M380 212H372V181H380V212Z" class="desk"/>
+      <path d="M347.5 219.5V213H359V219.5H347.5Z" class="desk"/>
+      <path d="M380 135.5H372.5V154H380V135.5Z" class="desk"/>
+      <path d="M334 104.5H328V115.5H334V104.5Z" class="desk"/>
+      <path d="M380 117H373V91H380V117Z" class="desk"/>
+      <path d="M340 104H346.5V117H340V104Z" class="desk"/>
+      <path d="M294.5 166.5H288.5V136H294.5V166.5Z" class="desk"/>
+      <path d="M288.5 181H294V211.5H288.5V181Z" class="desk"/>
+      <path d="M295 308.5H288.5V282.5H295V308.5Z" class="desk"/>
+      <path d="M327.5 308.5V282.5H334V308.5H327.5Z" class="desk"/>
+      <path d="M302.5 335.5V328.5H314.5V335.5H302.5Z" class="desk"/>
+      <path d="M360.5 335.5V328.5H380.5V335.5H360.5Z" class="desk"/>
+      <path d="M346.5 308.5H340V296.5H346.5V308.5Z" class="desk"/>
+      <path d="M353.5 282.5V289H380.5V282.5H353.5Z" class="desk"/>
+      <path d="M122.5 115H110V104H140V121.5H122.5V115Z" class="desk"/>
+      <path d="M90 129.5V141H101.5V129.5H90Z" class="desk"/>
+      <path d="M96 231H101.5V155.5H90V224.5H96V231Z" class="desk"/>
+      <path d="M160.5 104H172.5V115.5H160.5V104Z" class="desk"/>
+      <path d="M160.5 161.5H192.5V155.5H172.5V135.5H160.5V161.5Z" class="desk"/>
+      <path d="M192.5 104H186.5V128H192.5V104Z" class="desk"/>
+      <path d="M173.5 179.5V174H192.5V179.5H173.5Z" class="desk"/>
+      <path d="M153.5 193.5H172.5V218.5H166.5V231H160V225H153.5V193.5Z" class="desk"/>
+      <path d="M186.5 244.5H192.5V256.5H186.5V244.5Z" class="desk"/>
+      <path d="M173.5 283.5V277.5H192.5V283.5H173.5Z" class="desk"/>
+      <path d="M204.5 277.5H251V283.5H198V179.5H250.5V186.5H204.5V277.5Z" class="desk"/>
+      <path d="M133.5 238.5V283.5H63.5V110.5H71V276H89.5V251H102V276H121.5V148.5H128.5V161.5H133.5V226H128.5V238.5H133.5Z" class="desk"/>
+      <path d="M146.5 328H167.5V347H173V320.5H146.5V328Z" class="desk"/>
+      <path d="M199 367V320.5H206.5V367H199Z" class="desk"/>
+      <path d="M238.5 335.5H244.5V320.5H251V346.5H238.5V335.5Z" class="desk"/>
+      <path d="M211.5 341.5H217.5V352.5H211.5V341.5Z" class="desk"/>
+      <path d="M251 366.5H211.5V373.5H251V366.5Z" class="desk"/>
+      <path d="M328 386.5H295.5V346.5H328V340.5H288.5V393.5H328V386.5Z" class="desk"/>
+      <path d="M353 340.5V346.5H392V340.5H353Z" class="desk"/>
+      <path d="M341 398H333V362H341V398Z" class="desk"/>
+      <path d="M309 433H289V438H309V433Z" class="desk"/>
+      <path d="M393 438H320.5V444.5H393V438Z" class="desk"/>
+      <path d="M127.5 379V399H122V379H127.5Z" class="desk"/>
+      <path d="M140 424H146.5V405.5H140V424Z" class="desk"/>
+      <path d="M146.5 444.5H140V469.5H146.5V444.5Z" class="desk"/>
+      <path d="M244.5 476.5H251V495.5H244.5V476.5Z" class="desk"/>
+      <path d="M167.5 528H172.5V495H218.5V501.5H224.5V489.5H167.5V528Z" class="desk"/>
+      <path d="M198.5 411.5H173V406.5H198.5V411.5Z" class="desk"/>
+      <path d="M173 385.5H198.5V379H173V385.5Z" class="desk"/>
+      <path d="M186.5 436.5V430.5H198.5V436.5H186.5Z" class="desk"/>
+      <path d="M231.5 430.5V437.5H251V430.5H231.5Z" class="desk"/>
+      <path d="M444.5 493.5H289V488.5H444.5V493.5Z" class="desk"/>
+      <path d="M295 529H289V579.5H295V529Z" class="desk"/>
+      <path d="M333.5 529V579.5H322.5V529H333.5Z" class="desk"/>
+      <path d="M372.5 529H361.5V579.5H367.5V599H385.5V586H398.5V579.5H411.5V529H399.5V574.5H386.5V580.5H372.5V529Z" class="desk"/>
+      <path d="M445 529H438.5V579.5H445V529Z" class="desk"/>
+      <path d="M322.5 619.5V664.5H333.5V619.5H322.5Z" class="desk"/>
+      <path d="M361.5 619.5V664.5H373V619.5H361.5Z" class="desk"/>
+      <path d="M400 664.5V619.5H412V664.5H400Z" class="desk"/>
+      <path d="M508.5 567.5H528.5V618.5H508.5V567.5Z" class="desk"/>
+      <path d="M554.5 618.5H573.5V567.5H554.5V618.5Z" class="desk"/>
+      <path d="M620 618.5H600V567.5H620V618.5Z" class="desk"/>
+      <path d="M244.5 521V554.5H251V521H244.5Z" class="desk"/>
+      <path d="M146.5 528.5H140V554.5H166.5V547.5H146.5V528.5Z" class="desk"/>
+      <path d="M186.5 528.5H193V547H186.5V528.5Z" class="desk"/>
+      <path d="M224 540H218.5V527.5H199V521H224V540Z" class="desk"/>
+      <path d="M571.5 212.5H603.5V219.5H571.5V212.5Z" class="desk"/>
+      <path d="M584.5 173.5H571.5V167H584.5V173.5Z" class="desk"/>
+      <path d="M591 198.5H597.5V167H591V198.5Z" class="desk"/>
+      <path d="M284 265V404.5H288.5V398H333V361.5H328V393.5H288.5V340.5H328V347H333V340.5H347.5V347H353V340.5H392V372H398V340.5H444V394H431.5V444.5H399V432H393V444.5H320.5V432H309V438H289V432H284V495H289V488.5H444.5V494.5H450V450H462.5V445H437V398H448.5V335.5H385V322.5H380.5V335.5H288.5V282.5H334V314H340V282.5H380.5V308H385V277H288.5V265H284Z" class="wall"/>
+      <path d="M624 527.5H536V523H624V527.5Z" class="wall"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M464.5 683.5H270V572.5H122V418H102.5V360.5H129V334H45.5V78.5H211V161.5H238V104H269V52.5H519.5V148.5H680.5V295.5H585.5V464.5H670V573.5H638.5V657.5H490.5V626H464.5V683.5ZM445 664.5H289V522.5H284V561H256.5V470.5H251V515.5H238V521H251V554.5H199V521H224V515.5H167.5V521H193V554.5H140V521H153V515.5H140V399H122V379H166.5V391.5H173V379H251V424H173V406H166.5V430.5H251V443.5H256V361.5H251V373.5H211.5V320.5H251V346.5H256V316H193.5V320.5H206.5V367H146.5V320.5H179V316H82V288.5H140V283.5H63.5V97H192.5V161.5H160.5V174H192.5V283.5H167.5V288.5H256V213.5H251V225.5H225.5V230.5H251V251H225.5V256H251V283.5H198V179.5H250.5V192H256V123H283V237H288.5V224H301V219H288.5V128H307V123H288.5V76.5H334V82.5H339.5V76.5H346V70.5H373.5V76.5H380V117H340V98H334V123H321.5V128H334V146.5H340V121.5H380V168H340V161.5H334V179H340V173H380V219.5H340V194H334V219.5H321V224H385V70.5H501.5V167H565.5V224H603.5V219.5H571V167H663.5V219.5H636V187H630.5V219.5H618V224H663.5V277.5H567V335.5H503.5V445H490V450H567.5V477.5H504V533.5H508.5V482.5H619V501.5H625V482.5H652.5V555H620V639.5H508.5V561.5H504V607H450V522.5H445V664.5ZM519 353.5H567V432H519V353.5Z" class="wall"/>
+      <circle cx="385.5" cy="658.5" class="vent light"/>
+      <circle cx="437.5" cy="590.5" class="vent light"/>
+      <circle cx="531.5" cy="632.5" class="vent light"/>
+      <circle cx="294.5" cy="590.5" class="vent light"/>
+      <circle cx="330.5" cy="496.5" class="vent light"/>
+      <circle cx="314.5" cy="405.5" class="vent light"/>
+      <circle cx="339.5" cy="347.5" class="vent light"/>
+      <circle cx="336.5" cy="321.5" class="vent light"/>
+      <circle cx="178.5" cy="418.5" class="vent light"/>
+      <circle cx="172.5" cy="438.5" class="vent light"/>
+      <circle cx="152.5" cy="356.5" class="vent light"/>
+      <circle cx="242.5" cy="263.5" class="vent light"/>
+      <circle cx="294.5" cy="173.5" class="vent light"/>
+      <circle cx="578.5" cy="208.5" class="vent light"/>
+      <circle cx="655.5" cy="192.5" class="vent light"/>
+      <circle cx="401.5" cy="496.5" class="vent light"/>
+      <circle cx="543.5" cy="493.5" class="vent light"/>
+      <circle cx="644.5" cy="502.5" class="vent light"/>
+      <circle cx="434.5" cy="609.5" class="computer light"/>
+      <circle cx="524.5" cy="492.5" class="computer light"/>
+      <circle cx="343.5" cy="392.5" class="computer light"/>
+      <circle cx="178.5" cy="499.5" class="computer light"/>
+      <circle cx="298.5" cy="302.5" class="computer light"/>
+      <circle cx="366.5" cy="292.5" class="computer light"/>
+      <circle cx="240.5" cy="240.5" class="computer light"/>
+      <circle cx="368.5" cy="192.5" class="computer light"/>
+      <circle cx="368.5" cy="147.5" class="computer light"/>
+      <circle cx="368.5" cy="96.5" class="computer light"/>
+      <circle cx="587.5" cy="186.5" class="computer light"/>
+      <circle cx="305.5" cy="658.5" class="alimentations light"/>
+      <circle cx="564.5" cy="490.5" class="alimentations light"/>
+      <circle cx="608.5" cy="174.5" class="alimentations light"/>
+      <circle cx="295.5" cy="106.5" class="alimentations light"/>
+      <circle cx="186.5" cy="145.5" class="alimentations light"/>
+      <circle cx="218.5" cy="360.5" class="alimentations light"/>
+      <circle cx="128.5" cy="392.5" class="alimentations light"/>
+      <circle cx="211.5" cy="547.5" class="delivery light"/>
+      <circle cx="515.5" cy="524.5" class="delivery light"/>
+      <circle cx="318.5" cy="346.5" class="delivery light"/>
+      <circle cx="185.5" cy="359.5" class="delivery light"/>
+      <circle cx="230.5" cy="327.5" class="delivery light"/>
+      <circle cx="185.5" cy="266.5" class="delivery light"/>
+      <circle cx="262.5" cy="221.5" class="delivery light"/>
+      <circle cx="327.5" cy="195.5" class="delivery light"/>
+      <circle cx="327.5" cy="163.5" class="delivery light"/>
+      <circle cx="301.5" cy="134.5" class="delivery light"/>
+      <circle cx="297.5" cy="115.5" class="delivery light"/>
+      <circle cx="327.5" cy="98.5"  class="delivery light"/>
+      <circle cx="623.5" cy="172.5" class="delivery light"/>
+      <circle cx="324.5" cy="327.5" class="delivery light"/>
+      <circle cx="349.5" cy="327.5" class="delivery light"/>
+      <circle cx="172.5" cy="547.5" class="delivery light"/>
+      <circle cx="182.5" cy="508.5" class="delivery light"/>
+      <circle cx="160.5" cy="388.5" class="delivery light"/>
+    </svg>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
