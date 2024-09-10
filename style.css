@@ -63,6 +63,11 @@ svg {
   fill: url(#g);
   r: 5.5;
   filter: url(#sofGlow);
+  text-anchor: middle;
+  alignment-baseline: middle;
+  font-size: 22px;
+  font-family: monospace;
+  font-weight: 900;
 }
 .wall {
   fill: #373130;
