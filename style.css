@@ -73,3 +73,26 @@ svg {
   fill: #373130;
   stroke: #222222;
 }
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  svg {
+    width: 100%;
+    max-width: 500px;
+    height: inherit;
+  }
+  .menu {
+    width: 100%;
+    margin: 0;
+    max-width: 300px;
+    gap: 10px;
+    padding: 15px 10px;
+  }
+  .menu button {
+    font-size: 18px;
+    padding: 5px 10px;
+  }
+}
