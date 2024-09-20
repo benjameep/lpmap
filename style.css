@@ -41,6 +41,7 @@ main {
   font-family: "Barlow", sans-serif;
   cursor: pointer;
   letter-spacing: .25cap;
+  color: #222;
 }
 
 .menu button.active {
