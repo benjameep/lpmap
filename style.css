@@ -15,15 +15,12 @@ main {
   display: flex;
   padding: 20px;
   justify-content: center;
-  /* align-items: center; */
   gap: 10px;
 }
 
 .menu {
   display: flex;
-  /* padding-top: 40px; */
   flex-direction: column;
-  /* width: 100%; */
   margin: 40px 0;
   width: 300px;
   flex-shrink: 2;
@@ -53,25 +50,6 @@ main {
 
 svg {
   height: 600px;
-}
-
-.desk {
-  fill: black;
-  fill-opacity: 0.2;
-}
-.light {
-  fill: url(#g);
-  r: 5.5;
-  filter: url(#sofGlow);
-  text-anchor: middle;
-  alignment-baseline: middle;
-  font-size: 22px;
-  font-family: monospace;
-  font-weight: 900;
-}
-.wall {
-  fill: #373130;
-  stroke: #222222;
 }
 
 @media (max-width: 768px) {
